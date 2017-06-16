@@ -11,10 +11,16 @@ public class Run {
 		
 		//Ask for video file location
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Video File Location: ");
-		String vf = kb.nextLine();
+		System.out.print("Video File Location: ");
 		//"C:\\Users\\Jim\\Desktop\\sample.mp4"
+		String vf = kb.nextLine();
+		
+		//Ask for audio file target location
+		System.out.print("Audio File Target Location: ");
+		//"C:\\Users\\Jim\\Desktop\\Audio.wav"
+		String af = kb.nextLine();
+		
 		File Video = new File(vf);
-		VideoToAudio.ConvertToAudio(Video);
+		VideoToAudio.ConvertToAudio(Video, af);
 	}
 }
